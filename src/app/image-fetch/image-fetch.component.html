@@ -1,0 +1,7 @@
+<form (ngSumit)="onSearch()">
+    <input class="u-full-width" [(ngModel)]="searchTerm" type="text">
+    <br/>
+    <button type="submit">Search</button>
+</form>
+
+<img *ngIf="loading" src="https://i.imgur.com/LVHmLnb.gif">
