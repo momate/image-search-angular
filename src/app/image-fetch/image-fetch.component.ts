@@ -1,3 +1,4 @@
+import { ImageService } from './../core/image.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,15 +12,18 @@ export class ImageFetchComponent implements OnInit {
   loading = false;
   images: any[];
 
-  constructor() { }
+  constructor(private imageService: ImageService) { }
 
   ngOnInit(): void {
   }
 
   onSearch(){
     this.loading = true;
-
-    this.loading = false;
+    this.images = [];
+    this.imageService.search(this.searchTerm).subscribe((result: any) => {
+      this.images= result['results'];
+      this.loading = false;
+    });
   }
 
 }

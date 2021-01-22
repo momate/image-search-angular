@@ -6,3 +6,11 @@ button{
     margin-left: 30%;
     margin-right: 30%
 }
+
+.images {
+  column-count: 3;
+}
+
+img{
+  width: 100%;
+}
