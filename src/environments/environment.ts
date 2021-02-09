@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_KEY: 'MpVa9RKXgVmBzEdNFi7VyZihS48g_kbHIBgw94MJyq0',
+  API_KEY: 'YOUR API KEY',
   API_URL: 'https://api.unsplash.com/search/photos?client_id=',
 
 };
